@@ -1,0 +1,20 @@
+{
+  "name": "camillerampillon_3_22042021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch ./sass/styles.scss:./css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CamilleRampillon/CamilleRampillon_3_22042021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CamilleRampillon/CamilleRampillon_3_22042021/issues"
+  },
+  "homepage": "https://github.com/CamilleRampillon/CamilleRampillon_3_22042021#readme"
+}
