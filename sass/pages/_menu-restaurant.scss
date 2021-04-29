@@ -1,0 +1,74 @@
+body{
+    font-family: $text-font;
+}
+.container_restaurant{
+    background-color: #eaeaea;  
+}
+
+.restaurant_img{
+    height: 270px;
+    width: 100%;
+    object-fit: cover;
+}
+.container_restaurant_menu{
+    top: -2rem;
+    position: relative;
+    background-color: #eaeaea;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    &_title{
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        font-family: $title-font;
+    }
+}
+
+/* Css de la partit main */
+
+.dishe_block_title{
+    margin: 1rem 0 0.6rem 1rem;
+    font-size: small;
+}
+
+hr {
+height: 3px;
+width: 13%;
+max-width: 40px;
+min-width: 30px;
+background-color: $third-color;
+border: none;
+margin-top: 0.1rem;
+margin-left:0.4rem;
+}
+
+/* Css de la card menu a retrouver dans le fichiers _mixins */
+
+.dishe_card{
+    @include menu-card;
+    &_content_h2{
+        font-weight: 600;
+        margin-bottom: 0.2rem;
+    }
+    &_description{
+        display: flex;
+        justify-content: space-between;
+    }
+    &_description_text{
+      font-weight: 300;  
+    }
+    &_description_price{
+        font-weight: 600;
+    }
+}
+.btn_commander{
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem 2rem;
+    background-color: #eaeaea
+}
+
+.btn_commander_links{
+    @include btn;
+    margin-top: 1rem;
+}

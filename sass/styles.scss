@@ -8,12 +8,16 @@
 
 /*Components*/
 @import "./components/buttons";
+@import "./components/menu-card";
 
 /*Layouts*/
 @import "./layouts/header";
+@import "./layouts/header-restaurants";
 @import "./layouts/process";
 @import "./layouts/container";
 @import "./layouts/search";
 @import "./layouts/restaurants";
+@import "./layouts/footer";
 
 /*Pages*/ 
+@import "./pages/menu-restaurant";
