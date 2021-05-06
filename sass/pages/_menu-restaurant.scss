@@ -24,7 +24,7 @@ body{
     }
 }
 
-/* Css de la partit main */
+/* Css de la partie main */
 
 .dishe_block_title{
     margin: 1rem 0 0.6rem 1rem;
@@ -72,3 +72,54 @@ margin-left:0.4rem;
     @include btn;
     margin-top: 1rem;
 }
+
+
+/* animation qui donne l'impression de defillement lors de l'apparition des cartes  */
+
+.dishe_card:nth-child(2){
+    animation: slide_card linear 1s backwards;
+}
+
+.dishe_card:nth-child(3){
+    animation: slide_card linear 1s 0.3s backwards;
+}
+
+.dishe_card:nth-child(4){
+    animation: slide_card linear 1s 0.6s backwards;
+}
+
+.dishe_card:nth-child(5){
+    animation: slide_card linear 1s 0.9s backwards;
+}
+
+/* Css pour le slide de la checkbox  */
+
+.dishe_card_validator{
+    background-color: $third-color;
+    position: absolute;
+    top: 0;
+    padding: 0 2rem;
+    right: -150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.dishe_card:hover .dishe_card_validator{
+    right: 0%;
+    transition: right 1s;
+}
+
+.dishe_card:hover .dishe_card_validator_icon{
+    transform: rotate(-360deg);
+    transition: transform 1s;
+    color: white;
+}
+
+.dishe_card:hover .dishe_card_content_h2, .dishe_card_description_text{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+

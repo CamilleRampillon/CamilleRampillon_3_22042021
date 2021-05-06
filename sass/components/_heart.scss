@@ -1,0 +1,35 @@
+.like{
+        &--full{
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        background: -o-linear-gradient(280deg, #FF79DA, #9356DC);
+        background: linear-gradient(170deg, #FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: -webkit-transform 500ms  ease-in-out;
+        transition: -webkit-transform 500ms  ease-in-out;
+        -o-transition: transform 500ms  ease-in-out;
+        transition: transform 500ms  ease-in-out;
+        transition: transform 500ms  ease-in-out, -webkit-transform 500ms ease-in-out;
+        z-index: -1 ;
+        }
+
+    &--empty{
+        font-size: 2.5rem;
+        cursor: pointer;
+        position: relative;
+        transition: color 500ms ease;
+        z-index: 2;
+        margin-top: 0.6em;
+        &:hover .like--full{
+             cursor: pointer;
+            transform: scale(1) ;
+        }
+           
+    }
+
+}
