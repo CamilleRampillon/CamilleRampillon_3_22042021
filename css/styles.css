@@ -51,18 +51,10 @@ body {
   position: absolute;
   top: 0rem;
   left: 0rem;
-  background: -o-linear-gradient(280deg, #FF79DA, #9356DC);
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  -o-transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
   z-index: -1;
 }
 .like--empty {
@@ -366,7 +358,6 @@ body {
   font-family: "Shrikhand", sans-serif;
 }
 
-/* Css de la partie main */
 .dishe_block_title {
   margin: 1rem 0 0.6rem 1rem;
   font-size: small;
@@ -383,7 +374,7 @@ hr {
   margin-left: 0.4rem;
 }
 
-/* Css de la card menu a retrouver dans le fichiers _mixins */
+/* Carte de plat*/
 .dishe_card {
   position: relative;
   width: 95%;
@@ -444,7 +435,7 @@ hr {
   margin-bottom: 1rem;
 }
 
-/* animation qui donne l'impression de defillement lors de l'apparition des cartes  */
+/* Animation pour l'apparition des cartes  */
 .dishe_card:nth-child(2) {
   animation: slide_card linear 1s backwards;
 }
@@ -461,33 +452,37 @@ hr {
   animation: slide_card linear 1s 0.9s backwards;
 }
 
-/* Css pour le slide de la checkbox  */
-.dishe_card_validator {
+/* Animation de la checkbox  */
+.dishe_card_checkbox {
   background-color: #99E2D0;
   position: absolute;
   top: 0;
   padding: 0 2rem;
   right: -150px;
+  width: 2rem;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.dishe_card:hover .dishe_card_validator {
+.dishe_card:hover .dishe_card_checkbox {
   right: 0%;
   transition: right 1s;
 }
 
-.dishe_card:hover .dishe_card_validator_icon {
-  transform: rotate(-360deg);
+.dishe_card:hover.dishe_card_checkbox_icon {
+  transform: rotate(1turn);
   transition: transform 1s;
   color: white;
 }
-
-.dishe_card:hover .dishe_card_content_h2, .dishe_card_description_text {
+.dishe_card:hover.dishe_card_content_h2 .dishe_card_description_text {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+.dishe_card:hover.dishe_card_content {
+  width: calc(95% - 4rem);
+  transition: width 1s;
 }
 
 /*# sourceMappingURL=styles.css.map */

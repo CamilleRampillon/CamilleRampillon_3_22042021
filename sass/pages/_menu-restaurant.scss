@@ -24,13 +24,12 @@ body{
     }
 }
 
-/* Css de la partie main */
 
 .dishe_block_title{
     margin: 1rem 0 0.6rem 1rem;
     font-size: small;
 }
-
+// trait pour souligner les titres
 hr {
 height: 3px;
 width: 13%;
@@ -42,7 +41,7 @@ margin-top: 0.1rem;
 margin-left:0.4rem;
 }
 
-/* Css de la card menu a retrouver dans le fichiers _mixins */
+/* Carte de plat*/
 
 .dishe_card{
     @include menu-card;
@@ -74,7 +73,7 @@ margin-left:0.4rem;
 }
 
 
-/* animation qui donne l'impression de defillement lors de l'apparition des cartes  */
+/* Animation pour l'apparition des cartes  */
 
 .dishe_card:nth-child(2){
     animation: slide_card linear 1s backwards;
@@ -92,34 +91,43 @@ margin-left:0.4rem;
     animation: slide_card linear 1s 0.9s backwards;
 }
 
-/* Css pour le slide de la checkbox  */
+/* Animation de la checkbox  */
 
-.dishe_card_validator{
+.dishe_card_checkbox{
     background-color: $third-color;
     position: absolute;
     top: 0;
     padding: 0 2rem;
     right: -150px;
+    width: 2rem;
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-
-.dishe_card:hover .dishe_card_validator{
+.dishe_card:hover .dishe_card_checkbox{
     right: 0%;
-    transition: right 1s;
+    transition: right  1s;
 }
 
-.dishe_card:hover .dishe_card_validator_icon{
-    transform: rotate(-360deg);
-    transition: transform 1s;
-    color: white;
+.dishe_card:hover {
+    &.dishe_card_checkbox_icon{
+        transform: rotate(1turn);
+        transition: transform 1s;
+        color: white;
+    }
+    &.dishe_card_content_h2 .dishe_card_description_text{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    
+    }
+    &.dishe_card_content{
+        width:calc(95% - 4rem);
+        transition: width 1s;
+    }
 }
 
-.dishe_card:hover .dishe_card_content_h2, .dishe_card_description_text{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-}
+
+
 

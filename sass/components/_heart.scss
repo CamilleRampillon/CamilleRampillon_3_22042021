@@ -3,18 +3,12 @@
         position: absolute;
         top: 0rem;
         left: 0rem;
-        background: -o-linear-gradient(280deg, #FF79DA, #9356DC);
         background: linear-gradient(170deg, #FF79DA, #9356DC);
+        //prends la forme du coeur
         -webkit-background-clip: text;
+        //fais apparaitre le background
         -webkit-text-fill-color: transparent;
-        -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-        transform: scale(0);
-        -webkit-transition: -webkit-transform 500ms  ease-in-out;
-        transition: -webkit-transform 500ms  ease-in-out;
-        -o-transition: transform 500ms  ease-in-out;
-        transition: transform 500ms  ease-in-out;
-        transition: transform 500ms  ease-in-out, -webkit-transform 500ms ease-in-out;
+        transform: scale(0); 
         z-index: -1 ;
         }
 
