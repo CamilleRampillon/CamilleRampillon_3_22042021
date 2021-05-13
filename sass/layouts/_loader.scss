@@ -1,0 +1,42 @@
+@keyframes loading-spinner-circle {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(720deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes loading-spinner-page {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .loader {
+    height: 100%;
+    &::before {
+      content: "";
+      border: solid 10px $secondary-color;
+      border-bottom-color: $third-color;
+      border-radius: 50%;
+      height: 80px;
+      width: 80px;
+      position: absolute;
+      left: 50%;
+      top: 350px;
+      transform: translate3d(-50%, -50%, 0);
+      animation: loading-spinner-circle 2s linear both;
+    }
+  }

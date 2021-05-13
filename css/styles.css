@@ -71,6 +71,47 @@ body {
 }
 
 /*Layouts*/
+@keyframes loading-spinner-circle {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(720deg);
+    opacity: 0;
+  }
+}
+@keyframes loading-spinner-page {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loader {
+  height: 100%;
+}
+.loader::before {
+  content: "";
+  border: solid 10px #FF79DA;
+  border-bottom-color: #99E2D0;
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left: 50%;
+  top: 350px;
+  transform: translate3d(-50%, -50%, 0);
+  animation: loading-spinner-circle 2s linear both;
+}
+
 .header_logo {
   display: flex;
   justify-content: center;
@@ -470,19 +511,26 @@ hr {
   transition: right 1s;
 }
 
-.dishe_card:hover.dishe_card_checkbox_icon {
+.dishe_card:hover .dishe_card_checkbox_icon {
   transform: rotate(1turn);
   transition: transform 1s;
   color: white;
 }
-.dishe_card:hover.dishe_card_content_h2 .dishe_card_description_text {
+
+.dishe_card:hover .dishe_card_description_text {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
-.dishe_card:hover.dishe_card_content {
+
+.dishe_card:hover .dishe_card_content {
   width: calc(95% - 4rem);
   transition: width 1s;
+}
+.dishe_card:hover .dishe_card_content_h2 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 /*# sourceMappingURL=styles.css.map */

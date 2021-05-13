@@ -109,24 +109,27 @@ margin-left:0.4rem;
     right: 0%;
     transition: right  1s;
 }
-
-.dishe_card:hover {
-    &.dishe_card_checkbox_icon{
+.dishe_card:hover .dishe_card_checkbox_icon{
         transform: rotate(1turn);
         transition: transform 1s;
         color: white;
     }
-    &.dishe_card_content_h2 .dishe_card_description_text{
+.dishe_card:hover .dishe_card_description_text{
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
     
     }
-    &.dishe_card_content{
+.dishe_card:hover .dishe_card_content{
         width:calc(95% - 4rem);
         transition: width 1s;
+        &_h2{
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;  
+        }
     }
-}
+
 
 
 
