@@ -31,6 +31,12 @@
   }
 }
 /*Base*/
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Roboto";
   max-width: 1250px;
@@ -535,10 +541,10 @@ hr {
   top: 0;
   padding: 0 2rem;
   right: -150px;
-  width: 2rem;
   height: 100%;
   display: flex;
   align-items: center;
+  box-sizing: content-box;
 }
 
 .dishe_card:hover .dishe_card_checkbox {
@@ -559,19 +565,13 @@ hr {
 }
 
 .dishe_card:hover .dishe_card_content {
-  padding-right: 4rem;
+  padding-right: 5.5rem;
   transition: 1s;
 }
 .dishe_card:hover .dishe_card_content_h2 {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-}
-
-*, ::before, ::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
