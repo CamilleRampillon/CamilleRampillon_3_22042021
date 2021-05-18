@@ -559,8 +559,8 @@ hr {
 }
 
 .dishe_card:hover .dishe_card_content {
-  width: calc(95% - 4rem);
-  transition: width 1s;
+  padding-right: 4rem;
+  transition: 1s;
 }
 .dishe_card:hover .dishe_card_content_h2 {
   text-overflow: ellipsis;
