@@ -23,6 +23,9 @@ body{
         font-family: $title-font;
     }
 }
+.menu_title{
+    font-size: 1.8rem;
+}
 
 
 .dishe_block_title{
@@ -130,7 +133,39 @@ margin-left:0.4rem;
         }
     }
 
+/* responsive tablette*/
 
+@media screen and (min-width: 670px) and (max-width: 1024px){
+
+    .dishe_block{
+        width: 60%;
+        margin: auto;
+    }
+    .container_restaurant_menu_title{
+        width: 60%;
+        margin: auto;
+    }
+}
+
+/* responsive desktop */
+
+@media screen and (min-width: 1024px){
+
+    .container_restaurant_menu_title{
+        width: 40%;
+    }
+    .container_restaurant_menu_dishe{
+        display: flex;
+        justify-content: space-between;
+    }
+    .dishe_block{
+        width: 30%;
+    }
+    .dishe_card{
+        height: 120px;
+    }
+
+}
 
 
 

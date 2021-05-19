@@ -55,21 +55,19 @@ body {
 /*Components*/
 .like--full {
   position: absolute;
-  top: 0rem;
   left: 0rem;
   background: linear-gradient(170deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px black;
   transform: scale(0);
   z-index: -1;
 }
 .like--empty {
-  font-size: 2.5rem;
-  cursor: pointer;
+  font-size: 2.3rem;
   position: relative;
   transition: color 500ms ease;
   z-index: 2;
-  margin-top: 0.6em;
 }
 .like--empty:hover .like--full {
   cursor: pointer;
@@ -162,6 +160,26 @@ body {
   font-family: "Shrikhand", sans-serif;
 }
 
+@media screen and (min-width: 670px) and (max-width: 1024px) {
+  .header_logo {
+    height: 5rem;
+  }
+  .header_logo_text {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .header_block_logo {
+    height: 5rem;
+  }
+  .header_block_logo_text {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+  }
+}
 .header_restaurant {
   display: flex;
   align-items: center;
@@ -234,6 +252,17 @@ body {
   color: #9356dc;
 }
 
+@media screen and (min-width: 650px) and (max-width: 1024px) {
+  .process {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .process_card {
+    width: 60%;
+    margin: auto auto 2rem auto;
+  }
+}
 .search_form {
   display: flex;
   align-items: center;
@@ -296,6 +325,28 @@ body {
   margin-bottom: 1rem;
 }
 
+@media screen and (min-width: 670px) and (max-width: 1024px) {
+  .search-form {
+    height: 3rem;
+  }
+  .search-form_logo {
+    font-size: 1.3rem;
+  }
+  .search-form_field {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .search-form {
+    height: 3rem;
+  }
+  .search-form_logo {
+    font-size: 1.3rem;
+  }
+  .search-form_field {
+    font-size: 1.3rem;
+  }
+}
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -440,6 +491,10 @@ body {
   font-family: "Shrikhand", sans-serif;
 }
 
+.menu_title {
+  font-size: 1.8rem;
+}
+
 .dishe_block_title {
   margin: 1rem 0 0.6rem 1rem;
   font-size: small;
@@ -469,6 +524,11 @@ hr {
   overflow: hidden;
   animation: slide_card 1s linear backwards;
   transition: 1s;
+}
+@media screen and (min-width: 1024px) {
+  .dishe_card {
+    min-height: 70px;
+  }
 }
 .dishe_card_content_h2 {
   font-weight: 600;
@@ -572,6 +632,38 @@ hr {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+/* responsive tablette*/
+@media screen and (min-width: 670px) and (max-width: 1024px) {
+  .dishe_block {
+    width: 60%;
+    margin: auto;
+  }
+
+  .container_restaurant_menu_title {
+    width: 60%;
+    margin: auto;
+  }
+}
+/* responsive desktop */
+@media screen and (min-width: 1024px) {
+  .container_restaurant_menu_title {
+    width: 40%;
+  }
+
+  .container_restaurant_menu_dishe {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dishe_block {
+    width: 30%;
+  }
+
+  .dishe_card {
+    height: 120px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

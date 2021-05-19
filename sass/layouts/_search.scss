@@ -39,3 +39,25 @@
         @include btn;
     }   
 } 
+@media screen and (min-width: 670px) and (max-width:1024px){
+    .search-form{
+        height: 3rem;
+        &_logo{
+            font-size: 1.3rem;
+        }
+        &_field{
+            font-size: 1.3rem;
+        }
+    }
+}
+@media screen and (min-width: 1024px){
+.search-form{
+    height: 3rem;
+    &_logo{
+        font-size: 1.3rem;
+    }
+    &_field{
+        font-size: 1.3rem;
+    }
+ }
+}

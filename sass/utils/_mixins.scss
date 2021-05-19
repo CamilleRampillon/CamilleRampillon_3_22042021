@@ -34,6 +34,9 @@
     overflow: hidden;
     animation: slide_card 1s linear backwards;
     transition: 1s;
+    @media screen and (min-width: 1024px){
+        min-height: 70px;
+    }
 }
 
 @mixin heart-main {
