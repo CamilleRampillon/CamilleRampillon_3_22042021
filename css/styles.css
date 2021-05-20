@@ -85,7 +85,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 100;
-  animation: fondu 3s both;
+  animation: fondu 1s 1s both;
 }
 
 .letter {
