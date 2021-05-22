@@ -1,7 +1,9 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap");
 /*Utils*/
 /* Couleurs */
 /* Polices*/
+/* Breakpoints*/
 @keyframes slide_card {
   0% {
     opacity: 0;
@@ -32,7 +34,9 @@
   }
 }
 /*Base*/
-*, ::before, ::after {
+*,
+::before,
+::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -57,7 +61,7 @@ body {
 .like--full {
   position: absolute;
   left: 0rem;
-  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  background: linear-gradient(170deg, #ff79da, #9356dc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 1px black;
@@ -82,12 +86,32 @@ body {
   height: 100%;
   background: white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 100;
   animation: fondu 1s 1s both;
 }
 
+/* cercle de chargement*/
+.loader-spinner {
+  border: 5px solid #ff79da;
+  border-top: 5px solid #99e2d0;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: 70px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .letter {
   color: #484848;
   font-size: 60px;
@@ -98,16 +122,16 @@ body {
 
 @keyframes flash {
   0% {
-    color: #FF79DA;
-    text-shadow: 0 0 7px #9356DC;
+    color: #ff79da;
+    text-shadow: 0 0 7px #9356dc;
   }
   90% {
-    color: #99E2D0;
+    color: #99e2d0;
     text-shadow: none;
   }
   100% {
-    color: #FF79DA;
-    text-shadow: 0 0 7px #9356DC;
+    color: #ff79da;
+    text-shadow: 0 0 7px #9356dc;
   }
 }
 .letter:nth-child(1) {
@@ -161,6 +185,7 @@ body {
   font-family: "Shrikhand", sans-serif;
 }
 
+/* responsive tablette*/
 @media screen and (min-width: 670px) and (max-width: 1024px) {
   .header_logo {
     height: 5rem;
@@ -171,6 +196,7 @@ body {
     font-size: 2rem;
   }
 }
+/* responsive desktop*/
 @media screen and (min-width: 1024px) {
   .header_block_logo {
     height: 5rem;
@@ -229,7 +255,7 @@ body {
   z-index: 1;
   left: -11px;
   border-radius: 100%;
-  background-color: #9356DC;
+  background-color: #9356dc;
   height: 1.5rem;
   width: 1.5rem;
   min-width: 1.5rem;
@@ -243,17 +269,20 @@ body {
   color: lightslategrey;
 }
 
+/* changement de couleur de la carte au survol*/
 .process_card:hover {
   background-color: #e4d5f6;
   transition: 200ms;
 }
 
+/* changement de couleur de l'icone au survol*/
 .process_card:hover .process_card_icon {
   transition: 200ms;
   color: #9356dc;
 }
 
-@media screen and (min-width: 650px) and (max-width: 1024px) {
+/* responsive tablette*/
+@media screen and (min-width: 670px) and (max-width: 1024px) {
   .process {
     display: flex;
     flex-direction: column;
@@ -309,7 +338,7 @@ body {
   border-radius: 2.5rem;
   align-items: center;
   padding: 0 0.7rem;
-  background: linear-gradient(173deg, #FF79DA, #9356DC);
+  background: linear-gradient(173deg, #ff79da, #9356dc);
   text-decoration: none;
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.35);
   color: white;
@@ -326,6 +355,7 @@ body {
   margin-bottom: 1rem;
 }
 
+/* responsive tablette*/
 @media screen and (min-width: 670px) and (max-width: 1024px) {
   .search-form {
     height: 3rem;
@@ -337,6 +367,7 @@ body {
     font-size: 1.3rem;
   }
 }
+/* responsive desktop*/
 @media screen and (min-width: 1024px) {
   .search-form {
     height: 3rem;
@@ -391,8 +422,8 @@ body {
   font-size: 15px;
   font-weight: 500;
   border-radius: 3px;
-  background-color: #9be9d5;
-  color: #1b6351;
+  background-color: #99e2d0;
+  color: #185747;
   padding: 0.15rem 0.75rem;
 }
 .restaurants_list_card_new p {
@@ -455,12 +486,13 @@ body {
   padding-bottom: 0.5rem;
 }
 
+/* Alignement des textes*/
 .fa-utensils {
   margin-right: 1rem;
 }
 
 .fa-hands-helping {
-  margin-right: 0.6rem;
+  margin-right: 0.5rem;
 }
 
 /*Pages*/
@@ -501,18 +533,19 @@ body {
   font-size: small;
 }
 
+/* trait pour souligner les titres*/
 hr {
   height: 3px;
   width: 13%;
   max-width: 40px;
   min-width: 30px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   border: none;
   margin-top: 0.1rem;
   margin-left: 0.4rem;
 }
 
-/* Carte de plat*/
+/* Description du plat*/
 .dishe_card {
   position: relative;
   width: 95%;
@@ -560,7 +593,7 @@ hr {
   border-radius: 2.5rem;
   align-items: center;
   padding: 0 0.7rem;
-  background: linear-gradient(173deg, #FF79DA, #9356DC);
+  background: linear-gradient(173deg, #ff79da, #9356dc);
   text-decoration: none;
   box-shadow: 0 0.2rem 0.5rem 0 rgba(0, 0, 0, 0.35);
   color: white;
@@ -595,9 +628,9 @@ hr {
   animation: slide_card linear 1s 0.9s backwards;
 }
 
-/* Animation de la checkbox  */
+/* Animation au survol d'un plat = apparition de la checkbox et décalage de la description */
 .dishe_card_checkbox {
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   position: absolute;
   top: 0;
   padding: 0 2rem;
@@ -635,7 +668,7 @@ hr {
   white-space: nowrap;
 }
 
-/* responsive tablette*/
+/* responsive tablette */
 @media screen and (min-width: 670px) and (max-width: 1024px) {
   .dishe_block {
     width: 60%;
@@ -659,11 +692,7 @@ hr {
   }
 
   .dishe_block {
-    width: 30%;
-  }
-
-  .dishe_card {
-    height: 120px;
+    width: 35%;
   }
 }
 
